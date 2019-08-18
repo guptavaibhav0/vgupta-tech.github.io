@@ -1583,6 +1583,10 @@ section.special, article.special {
   text-align: center;
 }
 
+section p + ul, article p + ul {
+  margin-top: -1.2em;
+}
+
 header p {
   color: #7e7e7e;
   position: relative;

@@ -338,6 +338,10 @@ $size-header-pad: 4em;
 		&.special {
 			text-align: center;
 		}
+
+		p + ul {
+			margin-top: (_size(element-margin) * -0.8);
+		}
 	}
 
 	header {

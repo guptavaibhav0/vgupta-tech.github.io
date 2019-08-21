@@ -16,4 +16,4 @@ with open(os.path.join(dirpath, "template.mustache"), "r") as f:
 html = pystache.render(parsed_template, data)
 
 with open("index.html", "w") as f:
-    f.write(html)
+    f.write(html.strip())

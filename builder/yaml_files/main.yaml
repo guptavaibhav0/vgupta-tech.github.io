@@ -1,0 +1,10 @@
+name: Vaibhav Gupta
+intro: >
+  seeking challenging research in Mechatronics incorporating skills
+  in Mechanism Design, Control Theory and Machine Learning
+education: !include education.yaml
+experience: !include experience.yaml
+publications_conf: !include publications_conf.yaml
+other_academic_experience: !include other_academic_experience.yaml
+achievements: !include achievements.yaml
+languages: !include languages.yaml

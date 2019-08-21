@@ -1,0 +1,19 @@
+- post: Engineer 
+  company: CBS Techno, Nagoya, Japan
+  start_date: September 2017
+  end_date: July 2019
+  details: >
+    Developing the logic for active control of suspension system using
+    the standard sensors available in a car at the client company (SHOWA Ltd.)
+
+- post: Intern 
+  company: Robotics and Automation, TAL Manufacturing Solutions Ltd., Pune, India
+  start_date: May 2016
+  end_date: July 2016
+  details: |
+    Worked on various projects on a 5-axis industrial arm
+    <ul>
+      <li>Investigated and identified the source of positional error during Cartesian motion</li>
+      <li>Programmed the front-end application for vision system being used for palletizing operation in C#</li>
+      <li>Measured positional repeatability and interpreted the results to suggest possible improvements</li>
+    </ul>

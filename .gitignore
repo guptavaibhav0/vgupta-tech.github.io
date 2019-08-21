@@ -1,1 +1,8 @@
+# Visual Studio Code settings
 .vscode/*
+
+# Python virtual environment folder
+builder-venv/*
+
+# Python flake 8 settings
+.flake8

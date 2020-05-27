@@ -77,6 +77,28 @@
 				{{/publications_conf}}
 			</section>
 
+			<!-- Patents -->
+			<section id="patents">
+				<h2>Patents</h2>
+
+				{{#patents}}
+				<a href="{{& url}}">
+					<header>
+						<h4>{{title}}</h4>
+						<p>
+							<strong>{{number}}</strong>
+								in <strong>{{country}}</strong>
+								dated <strong>{{date}}</strong><br>
+							{{#inventors}}
+								- {{name}}, {{company}} <br>
+							{{/inventors}}
+						</p>
+					</header>
+				</a>
+				<hr/>
+				{{/patents}}
+			</section>
+
 			<!-- Other Academic Experience -->
 			<section id="other_academic_experience">
 				<h2>Other Academic Experience</h2>

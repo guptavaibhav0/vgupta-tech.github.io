@@ -1,3 +1,9 @@
+- url: documents/publications/ICE18179.pdf
+  title: "A perturbed cognate mechanism as a force sensor"
+  conference: euspen’s 18<sup>th</sup> International Conference & Exhibition
+  date: June 2018
+  location: Venice, Italy
+  
 - url: https://ieeexplore.ieee.org/document/8371077/
   title: "Three-stage computed-torque controller for trajectory tracking in non-holonomic wheeled mobile robot"
   conference: 15<sup>th</sup> International Workshop on Advanced Motion Control (AMC)

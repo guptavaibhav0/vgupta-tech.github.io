@@ -1,7 +1,19 @@
+- url: https://www.j-platpat.inpit.go.jp/c1800/PU/JP-6810779/AC6F8A600E799F1FA3192E68595E52C9584FE376245A5EF89A538DE3F24813A0/15/ja
+  title: 状態量算出装置、制御装置および車両 (The state quantity calculating device, control device, and vehicle)
+  country: Japan
+  filed_date: 26 September 2019
+  issued_date: 6 January 2021
+  company: 株式会社ショーワ (Showa Corporation)
+  number: 特許第6810779号(P6810779)
+  inventors: 
+    - name: グプタ ワイバワ (Gupta Vaibhav)
+    - name: 水口 祐一郎 (Minakuchi Yuichiro)
+    
 - url: https://www.j-platpat.inpit.go.jp/c1800/PU/JP-6695481/42C0FCBC18E9607E6FAB8FD4870D13F00BD90D1B7DB8FAA47BD376AF472E6CD0/15/ja
   title: 接地荷重推定装置、制御装置および接地荷重推定方法 (To provide a ground load estimation device, a control device and a load estimation method)
   country: Japan
-  date: 25 June 2019
+  filed_date: 25 June 2019
+  issued_date: 2 September 2020
   company: 株式会社ショーワ (Showa Corporation)
   number: 特許第6695481号(P6695481)
   inventors: 
@@ -11,7 +23,8 @@
 - url: https://www.j-platpat.inpit.go.jp/c1800/PU/JP-6748765/B33F697FE4956C12B623F6C8DCA281652AA65C25106A9DB39A4F10C33507BD2D/15/ja
   title: 接地荷重推定装置、制御装置および接地荷重推定方法 (To provide a ground load estimation device, a control device and a load estimation method)
   country: Japan
-  date: 25 June 2019
+  filed_date: 25 June 2019
+  issued_date: 20 May 2020
   company: 株式会社ショーワ (Showa Corporation)
   number: 特許第6748765号(P6748765)
   inventors: 

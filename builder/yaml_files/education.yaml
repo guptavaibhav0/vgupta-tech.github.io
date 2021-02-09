@@ -1,15 +1,28 @@
-- title: MS in Robotics
-  institute: École polytechnique fédérale de Lausanne, Lausanne, Switzerland
-  start_date: 2019
+- title: Master of Science
+  major: Robotics
+  minor:
+  institute: École polytechnique fédérale de Lausanne
+  city: Lausanne
+  country: Switzerland
+  start_date: September 2019
   end_date:
-  details: 
+  GPA: 5.45/6 (interim)
+  area_of_interest: Application of optimal control theory and learning systems
+  thesis:
 
-- title: Bachelor of Technology (B. Tech.)
-  institute: Indian Institute of Technology, Delhi
-  start_date: 2013
-  end_date: 2017
-  details: >
-    Graduated with a GPA of <strong>9.231/10</strong> with major in <strong>‘Mechanical Engineering’</strong> 
-    and minor in <strong>‘Interdisciplinary Specialization in Robotics’</strong>. 
-    Main area of study was <em>Mechatronics</em> and <em>Robotics</em> along with 
-    Mechanical Design and Control Theory as special interests.
+- title: Bachelor of Technology
+  major: Mechanical Engineering
+  minor: Interdisciplinary Specialization in Robotics
+  institute: Indian Institute of Technology Delhi
+  city: New Delhi
+  country: India
+  start_date: July 2013
+  end_date: May 2017
+  GPA: 9.231/10
+  area_of_interest: Mechanical Design and Control Theory for mechatronic applications
+  thesis:
+    title: Force Feedback in Laparoscopy
+    details: >
+      Analysed, simulated, and fabricated a compliant mechanism using flexure components 
+      to sense and map the contact forces on laparoscopic instrument for haptic control
+    link: 

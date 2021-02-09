@@ -1,7 +1,8 @@
 name: Vaibhav Gupta
-intro: >
-  seeking challenging research in Mechatronics incorporating skills
-  in Mechanism Design, Control Theory and Machine Learning
+intro: seeking doctorate student position in the areas of automation and robotics.
+intro2: >
+  Interested in development and application of optimal control theory and learning
+  systems with guarantees on safety and performance.
 education: !include education.yaml
 experience: !include experience.yaml
 publications_conf: !include publications_conf.yaml

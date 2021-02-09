@@ -27,15 +27,24 @@
 				<h2>Education</h2>
 				{{#education}}
 				<header>
-					<h4>{{title}}</h4>
+					<h4>{{title}} ({{major}})</h4>
 					<p>
-						<strong>{{institute}}</strong><br>
+						<strong>{{institute}}</strong>, {{country}}<br>
 						{{start_date}} -
 						{{#end_date}} {{end_date}} {{/end_date}}
 						{{^end_date}} Present {{/end_date}}
 					</p>
 				</header>
-				{{#details}} <p>{{& details}}</p> {{/details}}
+				<ul>
+					<li>GPA of {{GPA}}{{#minor}} with minor in {{& minor}}{{/minor}}</li>
+					<li><i>Area of Interest:</i> {{area_of_interest}}</li>
+					{{#thesis}}
+						<li>
+							<i>Thesis:</i> {{title}} <br>
+							{{details}}
+						</li>
+					{{/thesis}}
+				</ul>
 				<hr/>
 				{{/education}}
 			</section>
@@ -48,7 +57,7 @@
 				<header>
 					<h4>{{post}}</h4>
 					<p>
-						<strong>{{company}}</strong><br>
+						<strong>{{company}}</strong>, {{city}}, {{country}}<br>
 						{{start_date}} - 
 						{{#end_date}} {{end_date}} {{/end_date}}
 						{{^end_date}} Present {{/end_date}}
@@ -89,7 +98,9 @@
 						<p>
 							<strong>{{number}}</strong>
 								in <strong>{{country}}</strong>
-								dated <strong>{{date}}</strong><br>
+								{{#issued_date}}issued <strong>{{& issued_date}}</strong>{{/issued_date}}
+								{{^issued_date}}filed <strong>{{& filed_date}}</strong>{{/issued_date}}
+								<br>
 							{{#inventors}}
 								- {{name}}, {{company}} <br>
 							{{/inventors}}
@@ -125,7 +136,8 @@
 				<h2>Languages</h2>
 				{{#languages}}
 				<div class="row">
-					<div class="col-6 col-12-small">{{name}}</div>
+					<div class="col-3 col-6-small">{{name}}</div>
+					<div class="col-3 col-6-small">CEFR {{CEFR}}</div>
 					<div class="col-6 col-12-small">{{level}}</div>
 				</div>
 				<hr/>
@@ -142,6 +154,7 @@
 					<li><a href="https://www.linkedin.com/in/guptavaibhav0/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
 					<li><a href="https://www.researchgate.net/profile/Vaibhav_Gupta29" class="icon brands fa-researchgate"><span class="label">ResearchGate</span></a></li>
 					<li><a href="https://orcid.org/0000-0003-4159-6261" class="icon brands fa-orcid"><span class="label">Orcid</span></a></li>
+					<li><a href="https://github.com/guptavaibhav0" class="icon brands fa-github"><span class="label">Github</span></a></li>
 					<li><a href="mailto:vaibhav.gupta@epfl.ch" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 				</ul>
 				<ul class="copyright">

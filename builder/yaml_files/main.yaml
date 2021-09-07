@@ -1,6 +1,6 @@
 name: Vaibhav Gupta
-intro: seeking doctorate student position in the areas of automation and robotics.
-intro2: >
+# intro: seeking doctorate student position in the areas of automation and robotics.
+intro: >
   Interested in development and application of optimal control theory and learning
   systems with guarantees on safety and performance.
 education: !include education.yaml

@@ -4,11 +4,16 @@
   institute: École polytechnique fédérale de Lausanne
   city: Lausanne
   country: Switzerland
-  start_date: September 2019
-  end_date:
-  GPA: 5.45/6 (interim)
+  start_date: Sept 2019
+  end_date: Sept 2021
+  GPA: 5.512/6
   area_of_interest: Application of optimal control theory and learning systems
   thesis:
+    title: Vibration Control in an Adaptive Optic System
+    details: >
+      Proposed a new loosely coupled robust vibration controller schema and 
+      provided a MATLAB toolbox for the controller design.
+    link: 
 
 - title: Bachelor of Technology
   major: Mechanical Engineering

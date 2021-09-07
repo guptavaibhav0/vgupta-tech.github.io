@@ -3,7 +3,7 @@
   city: Lausanne
   country: Switzerland
   start_date: March 2020
-  end_date:
+  end_date: Feb 2021
   details: |
     <ul>
       <li>Developed a PyBullet framework for collision simulation between a human and a mobile robot</li>
@@ -15,7 +15,7 @@
   company: CBS Techno
   city: Nagoya
   country: Japan
-  start_date: September 2017
+  start_date: Sept 2017
   end_date: July 2019
   details: |
     <ul>

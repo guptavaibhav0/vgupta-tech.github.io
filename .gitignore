@@ -2,7 +2,7 @@
 .vscode/*
 
 # Python virtual environment folder
-builder-venv/*
+venv*
 
 # Python flake 8 settings
 .flake8

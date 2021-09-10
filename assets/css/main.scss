@@ -14,11 +14,11 @@
             --clr-#{$color}-#{$shade}: #{$val};            
         }
     }
+    --clr-box-shadow: #{rgba(map-get($colors, primary, 500), 0.4)};
 
     --ff-primary: 'Atkinson Hyperlegible', Arial, Helvetica, sans-serif;
-    --ff-accent: 'Lobster', cursive; //'Times New Roman', Times, serif;
+    --ff-accent: 'Lobster', cursive; //'Times New Roman', Times, serif;   
     
-    --clr-box-shadow: $clr-box-shadow;
     --bg-gradient: linear-gradient(
         var(--clr-primary-400),
         var(--clr-primary-200));

@@ -1,19 +1,44 @@
-$clr-box-shadow: rgba(#222C2A, 0.2);
+@function v($var) {
+    @return(--#{$var})
+}
+
+$clr-primary-hue: 18;
+$clr-primary-sat: 53%;
+
+
+$clr-lightness-100: 90;
+$clr-lightness-200: 61;
+$clr-lightness-400: 48;
+$clr-lightness-900: 5;
+
+$clr-box-shadow: hsl($clr-primary-hue, $clr-primary-sat, 8%, 0.4);
 
 :root{
-    --clr-white: #F3EED9;
-    --clr-black: #222C2A;
-    --clr-primary-200: #CD8D6B;
-    --clr-primary-400: #BD623A;   
+    --clr-white: hsl(#{$clr-primary-hue}, #{$clr-primary-sat}, 90%);
+    --clr-black: hsl(#{$clr-primary-hue}, #{$clr-primary-sat}, 8%);
+
+    --clr-primary-200: hsl(#{$clr-primary-hue}, #{$clr-primary-sat}, 61%);
+    --clr-primary-400: hsl(#{$clr-primary-hue}, #{$clr-primary-sat}, 48%);
     
     --ff-primary: 'Atkinson Hyperlegible', Arial, Helvetica, sans-serif;
     --ff-accent: 'Lobster', cursive; //'Times New Roman', Times, serif;
+    
+    --clr-box-shadow: hsl(#{$clr-primary-hue}, #{$clr-primary-sat}, 48%, 0.4);
 
     --bg-gradient: linear-gradient(
-        45deg, 
-        var(--clr-white),
-        var(--clr-primary-200),
-        var(--clr-primary-400));
+        var(--clr-primary-400),
+        var(--clr-primary-200));
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --clr-white: hsl(#{$clr-primary-hue}, #{$clr-primary-sat}, 12%);
+        --clr-black: hsl(#{$clr-primary-hue}, #{$clr-primary-sat}, 90%);
+    
+        --clr-primary-200: hsl(#{$clr-primary-hue}, #{$clr-primary-sat}, 30%);
+        --clr-primary-400: hsl(#{$clr-primary-hue}, #{$clr-primary-sat}, 20%);
+    }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -21,14 +46,6 @@ $clr-box-shadow: rgba(#222C2A, 0.2);
 *::before,
 *::after {
     box-sizing: border-box;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-p {
     margin: 0;
 }
 
@@ -39,21 +56,27 @@ body {
     color: var(--clr-black);
     font-family: var(--ff-primary);
     font-weight: 400;
-    font-size: clamp(1rem, 0.55rem + 2vw, 1.3125rem);//1.3125rem;
+    font-size: clamp(1rem, 0.55rem + 2vw, 1.15rem);//1.3125rem;
     line-height: 1.6;
+    
     display: grid;
-    place-content: center;
-}
+    grid-template: 
+        ". header main ." 1fr
+        ". footer main ." min-content
+        / 1fr minmax(18rem, 30rem) minmax(42rem, 70rem) 1fr;
+    gap: 0;
 
-.content-box {
-    background-color: var(--clr-white);
-    max-width: 100rem;
+    min-height: 100vh;
+    position: relative;
 
-    box-shadow:0 0 1rem 1rem $clr-box-shadow;
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+        
+    @media only screen and (max-width: 61rem) {
+        grid-template: 
+            "header" min-content
+            "main" 1fr
+            "footer" min-content
+            / 1fr;
+    }
 }
 
 h1,
@@ -63,7 +86,6 @@ h2 {
     font-weight: 900;
 }
 
-
 a:focus {
     outline: 0.1em solid currentColor;
     outline-offset: 0.2em;
@@ -72,52 +94,36 @@ a:focus {
 /* -------------------------------------------------------------------------- */
 /* Header */
 header {
-    flex: 1 1 30%;
-
+    grid-area: header;
+    padding-inline: 1em;
+    
     text-align: center;
     background-image: var(--bg-gradient);
     background-size: 300%;
     background-position: right;
-    min-width: 18rem;
 
     .header-container {
         position: sticky;
+        align-self: start;
         top: 0;
-        min-height: 100vh;
+    
+        padding-block-start: 1em;
+        padding-block: clamp(1em, 5vw, 4em);
+        padding-inline: 1em;
 
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-
-        .header {
-            padding-block-start: clamp(1em, 5vw, 4em);
-            padding-inline: 1em;
-
-            // > h1 {
-            //     background-image: var(--bg-gradient);
-            //     background-clip: text;
-            //     background-position: left;
-            //     color: transparent;
-            // }
-
-            .avatar img {
-                border-radius: 100%;
-                width: 65%;
-                max-width: 24ch;
-            }
-            p {
-                padding-top: 1em;
-                font-size: 1.2em;
-            }
+        .name {
+            margin: 0.5em;
+        }
+        
+        .avatar {
+            border-radius: 100%;
+            width: 65%;
+            max-width: 24ch;
         }
 
-        .footer {
-            margin-top: auto;
-
-            a:hover,
-            a:focus {
-                color: inherit  ;
-            }
+        .tagline {
+            padding-top: 1em;
+            font-size: 1.2em;
         }
     }
 
@@ -126,49 +132,9 @@ header {
 /* -------------------------------------------------------------------------- */
 /* Main */
 .main {
-    flex: 1 1 70%;
-    
-    > section {
-        padding-top: 1.5rem;
-        border-bottom: 0.1rem solid var(--clr-black);
-    }
-}
-
-
-.main-container {
+    grid-area: main;
     padding-inline: 0.5em;
 
-    > div,
-    > a > div {
-        padding-inline: 0.5rem;
-        margin-bottom: 1rem;
-        box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem $clr-box-shadow;
-        animation: box-shadow 400ms ease;
-
-        &:hover,
-        &:focus {
-            box-shadow: 0.2rem 0.2rem 0.4rem 0.2rem $clr-box-shadow;
-        }
-    }
-
-    > a {
-        text-decoration: none;
-        color: inherit;
-
-        &:hover,
-        &:focus {
-            > div {
-                box-shadow: 0.2rem 0.2rem 0.4rem 0.2rem $clr-box-shadow;
-            }
-        }
-        &:focus {
-            outline: 0;
-            > div {
-                outline: 0.2rem solid var(--clr-primary-400);
-            }
-        }
-    }
-    
     h2 {
         margin-bottom: 1rem;
     }
@@ -176,18 +142,47 @@ header {
     ul {
         margin: 0;
         margin-bottom: 1em;
-        list-style: "";
+        // list-style: "";
 
-        li::before {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            content: "\25cf";
-            display: inline-block;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            margin-right: 0.5em;
+        // li::before {
+        //     font-family: "Font Awesome 5 Free";
+        //     font-weight: 900;
+        //     content: "\25cf";
+        //     display: inline-block;
+        //     font-style: normal;
+        //     font-variant: normal;
+        //     text-rendering: auto;
+        //     -webkit-font-smoothing: antialiased;
+        //     margin-right: 0.5em;
+        // }
+    }
+
+    section {
+        padding-block: 0.5rem;
+        border-bottom: 0.1rem solid var(--clr-black);
+
+        .card {
+            padding-inline: 0.5rem;
+            margin-block: 0.5rem;
+            box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem var(--clr-box-shadow);
+            animation: box-shadow 400ms ease;
+    
+            &:hover,
+            &:focus {
+                box-shadow: 0.2rem 0.2rem 0.4rem 0.2rem var(--clr-box-shadow);
+            }
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+    
+            &:focus {
+                outline: 0;
+                > div {
+                    outline: 0.2rem solid var(--clr-primary-400);
+                }
+            }
         }
     }
 
@@ -204,7 +199,7 @@ header {
         .time {
             flex: 1 1 30%;
             text-align: right;
-            min-width: 10ch;
+            min-width: 10em;
         }
     }
     
@@ -224,17 +219,21 @@ header {
             flex: 1 1 50%;
         }
     }
+
 }
 
 /* -------------------------------------------------------------------------- */
 /* Footer */
 footer {
+    grid-area: footer;
+
     text-align: center;
     background-color: var(--clr-black);
     color: var(--clr-white);
-    min-width: 100%;
-    display: none;
     padding-block-start: 0.5em;
+
+    position: sticky;
+    bottom: 0;
 }
 
 .icon {
@@ -294,23 +293,5 @@ footer {
     a:hover,
     a:focus {
         color: var(--clr-primary-200);
-    }
-}
-
-/* -------------------------------------------------------------------------- */
-/* Large Screen - Media Query */
-@media only screen and (max-width: 60rem) {
-    header {
-        .header-container {
-            min-height: 0;
-
-
-            .footer {
-                display: none;
-            }
-        }
-    }
-    footer {
-        display: block;
     }
 }

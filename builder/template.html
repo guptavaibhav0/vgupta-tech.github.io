@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<meta name="description" content="Personal webpage of {{name}}.">
+	<meta name="author" content="{{name}}">
+	<meta name="theme-color" content="#BD623A">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{name}}</title>
@@ -15,194 +19,161 @@
 </head>
 
 <body>
-    <div class="content-box">
-		<!-- Header -->
-		<header>
-			<div class="header-container">
-				<div class="header">
-					<div class="avatar">
-						<img src="assets/images/avatar.jpg" alt="potrait image of Vaibhav Gupta" />
+	<!-- Header -->
+	<header>
+		<div class="header-container">
+			<img class="avatar" src="assets/images/avatar.jpg" alt="Portrait image of Vaibhav Gupta" />
+			<h1 class="name">Vaibhav Gupta</h1>
+			<p class="tagline">
+				Interested in development and application of optimal control theory and learning systems with guarantees on safety and performance.
+			</p>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div class="main">
+
+		<!-- Education -->
+		<section>
+			<h2>Education</h2>
+			{{#education}}
+			<div class="card">
+				<h3>{{title}} ({{major}})</h3>
+				<div class="place-time">
+					<div class="place">
+						<strong>{{institute}}</strong>, {{country}}
 					</div>
-					<h1>{{name}}</h1>
+					<div class="time">
+						{{start_date}} -
+						{{#end_date}} {{end_date}} {{/end_date}}
+						{{^end_date}} Present {{/end_date}}
+					</div>
+				</div>
+				<p><ul>
+					<li>GPA of {{GPA}}{{#minor}} with minor in {{& minor}}{{/minor}}</li>
+					<li><i>Area of Interest:</i> {{area_of_interest}}</li>
+					{{#thesis}}
+					<li>
+						<i>Thesis:</i> {{title}} <br>
+						{{details}}
+					</li>
+					{{/thesis}}
+				</ul></p>
+			</div>
+			{{/education}}
+		</section>
+
+		<!-- Experience -->
+		<section>
+			<h2>Experience</h2>
+			{{#experience}}
+			<div class="card">
+				<h3>{{post}}</h3>
+				<div class="place-time">
+					<div class="place">
+						<strong>{{company}}</strong>, {{city}}, {{country}}
+					</div>
+					<div class="time">
+						{{start_date}} -
+						{{#end_date}} {{end_date}} {{/end_date}}
+						{{^end_date}} Present {{/end_date}}
+					</div>
+				</div>
+				{{#details}} <p>{{& details}}</p> {{/details}}
+			</div>
+			{{/experience}}
+		</section>
+
+		<!-- Publications -->
+		<section>
+			<h2>Publications</h2>
+
+			{{#publications_conf}}
+			<a href="{{& url}}">
+				<div class="card">
+					<h3>{{title}}</h3>
 					<p>
-						{{intro}}
+						<strong>{{& conference}}</strong><br>
+						{{date}} | {{location}} <br>
+						{{#doi}} <strong>DOI:</strong> {{doi}} {{/doi}}
 					</p>
 				</div>
-				<div class="footer">
-					<div class="icons">
-						<a href="documents/resume.pdf" class="icon download"></a>
-						<a href="https://www.linkedin.com/in/guptavaibhav0/" class="icon linkedin"></a>
-						<a href="https://www.researchgate.net/profile/Vaibhav_Gupta29" class="icon researchgate"></a>
-						<a href="https://orcid.org/0000-0003-4159-6261" class="icon orcid"></a>
-						<a href="https://github.com/guptavaibhav0" class="icon github"></a>
-						<a href="mailto:vaibhav.gupta@epfl.ch" class="icon envelope"></a>
-					</div>
-					<p>&copy; {{name}}</p>
+			</a>
+			{{/publications_conf}}
+		</section>
+
+		<!-- Patents -->
+		<section>
+			<h2>Patents</h2>
+
+			{{#patents}}
+			<a href="{{& url}}">
+				<div class="card">
+					<h3>{{title}}</h3>
+					<p>
+						<strong>{{number}}</strong>
+							in <strong>{{country}}</strong>
+							{{#issued_date}}issued <strong>{{& issued_date}}</strong>{{/issued_date}}
+							{{^issued_date}}filed <strong>{{& filed_date}}</strong>{{/issued_date}}
+							<br>
+						{{#inventors}}
+							- {{name}}, {{company}} <br>
+						{{/inventors}}
+					</p>
 				</div>
+			</a>
+			{{/patents}}
+		</section>
+
+		<!-- Other Academic Experience -->
+		<section>
+			<h2>Other Academic Experience</h2>
+
+			{{#other_academic_experience}}
+			<div class="card">
+				<h3>{{title}}</h3>
+				<p>{{& details}}</p>
 			</div>
-		</header>
+			{{/other_academic_experience}}
+		</section>
 
-		<!-- Main -->
-        <div class="main">
+		<!-- Achievements -->
+		<section>
+			<h2>Achievements</h2>
 
-			<!-- Education -->
-            <section>
-                <div class="main-container">
-                    <h2>Education</h2>
-					{{#education}}
-                    <div>
-                        <h3>{{title}} ({{major}})</h3>
-                        <div class="place-time">
-                            <div class="place">
-								<strong>{{institute}}</strong>, {{country}}
-							</div>
-                            <div class="time">
-								{{start_date}} -
-								{{#end_date}} {{end_date}} {{/end_date}}
-								{{^end_date}} Present {{/end_date}}
-							</div>
-                        </div>
-                        <p><ul>
-                            <li>GPA of {{GPA}}{{#minor}} with minor in {{& minor}}{{/minor}}</li>
-                            <li><i>Area of Interest:</i> {{area_of_interest}}</li>
-							{{#thesis}}
-							<li>
-								<i>Thesis:</i> {{title}} <br>
-								{{details}}
-							</li>
-							{{/thesis}}
-                        </ul></p>
-                    </div>
-					{{/education}}
-                </div>
-            </section>
+			{{#achievements}}
+			<div class="card">
+				<h3>{{title}}</h3>
+				<p>{{& details}}</p>
+			</div>
+			{{/achievements}}
+		</section>
 
-			<!-- Experience -->
-            <section>
-                <div class="main-container">
-                    <h2>Experience</h2>
-					{{#experience}}
-                    <div>
-                        <h3>{{post}}</h3>
-                        <div class="place-time">
-                            <div class="place">
-								<strong>{{company}}</strong>, {{city}}, {{country}}
-							</div>
-                            <div class="time">
-								{{start_date}} -
-								{{#end_date}} {{end_date}} {{/end_date}}
-								{{^end_date}} Present {{/end_date}}
-							</div>
-                        </div>
-						{{#details}} <p>{{& details}}</p> {{/details}}
-                    </div>
-					{{/experience}}
-                </div>
-            </section>
+		<!-- Languages -->
+		<section>
+			<h2>Languages</h2>
 
-			<!-- Publications -->
-			<section>
-                <div class="main-container">
-                    <h2>Publications</h2>
-
-					{{#publications_conf}}
-					<a href="{{& url}}">
-						<div>
-							<h3>{{title}}</h3>
-							<p>
-								<strong>{{& conference}}</strong><br>
-								{{date}} | {{location}} <br>
-								{{#doi}} <strong>DOI:</strong> {{doi}} {{/doi}}
-							</p>
-						</div>
-					</a>
-					{{/publications_conf}}
-
-                </div>
-            </section>
-
-			<!-- Patents -->
-			<section>
-                <div class="main-container">
-                    <h2>Patents</h2>
-
-					{{#patents}}
-					<a href="{{& url}}">
-						<div>
-							<h3>{{title}}</h3>
-							<p>
-								<strong>{{number}}</strong>
-									in <strong>{{country}}</strong>
-									{{#issued_date}}issued <strong>{{& issued_date}}</strong>{{/issued_date}}
-									{{^issued_date}}filed <strong>{{& filed_date}}</strong>{{/issued_date}}
-									<br>
-								{{#inventors}}
-									- {{name}}, {{company}} <br>
-								{{/inventors}}
-							</p>
-						</div>
-					</a>
-					{{/patents}}
-
-                </div>
-            </section>
-
-			<!-- Other Academic Experience -->
-			<section>
-                <div class="main-container">
-                    <h2>Other Academic Experience</h2>
-
-					{{#other_academic_experience}}
-					<div>
-						<h3>{{title}}</h3>
-						<p>{{& details}}</p>
-					</div>
-					{{/other_academic_experience}}
-                </div>
-            </section>
-
-			<!-- Achievements -->
-			<section>
-                <div class="main-container">
-                    <h2>Achievements</h2>
-
-					{{#achievements}}
-					<div>
-						<h3>{{title}}</h3>
-						<p>{{& details}}</p>
-					</div>
-					{{/achievements}}
-                </div>
-            </section>
-
-			<!-- Languages -->
-			<section>
-                <div class="main-container">
-                    <h2>Languages</h2>
-
-					{{#languages}}
-					<div class="language">
-						<div class="name">{{name}}</div>
-						<div class="cefr">CEFR {{CEFR}}</div>
-						<div class="level">{{level}}</div>
-					</div>
-					{{/languages}}
-                </div>
-            </section>
-		</div>
-	
-		<!-- Footer -->
-        <footer>
-            <div class="icons">
-                <a href="documents/resume.pdf" class="icon download"></a>
-                <a href="https://www.linkedin.com/in/guptavaibhav0/" class="icon linkedin"></a>
-                <a href="https://www.researchgate.net/profile/Vaibhav_Gupta29" class="icon researchgate"></a>
-                <a href="https://orcid.org/0000-0003-4159-6261" class="icon orcid"></a>
-                <a href="https://github.com/guptavaibhav0" class="icon github"></a>
-                <a href="mailto:vaibhav.gupta@epfl.ch" class="icon envelope"></a>
-            </div>
-            <p>&copy; {{name}}</p>
-        </footer>
+			{{#languages}}
+			<div class="language card">
+				<div class="name">{{name}}</div>
+				<div class="cefr">CEFR {{CEFR}}</div>
+				<div class="level">{{level}}</div>
+			</div>
+			{{/languages}}
+		</section>
 	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="icons">
+			<a href="/assets/docs/resume.pdf" class="icon download" title="Download"></a>
+			<a href="https://www.linkedin.com/in/guptavaibhav0/" class="icon linkedin" title="LinkedIn"></a>
+			<a href="https://www.researchgate.net/profile/Vaibhav_Gupta29" class="icon researchgate" title="ResearchGate"></a>
+			<a href="https://orcid.org/0000-0003-4159-6261" class="icon orcid" title="ORCID"></a>
+			<a href="https://github.com/guptavaibhav0" class="icon github" title="GitHub"></a>
+			<a href="mailto:vaibhav.gupta@epfl.ch" class="icon envelope" title="Email me!"></a>
+		</div>
+		<p>&copy; {{name}}</p>
+	</footer>
 </body>
 </html>

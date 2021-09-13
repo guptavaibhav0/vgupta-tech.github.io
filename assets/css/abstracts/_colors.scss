@@ -1,12 +1,15 @@
+$base-primary-color: hsl(18, 53%, 30%);
+
 $colors: (
     primary: (
-        100: hsl(18, 53%, 95%),
-        200: hsl(18, 53%, 60%),
-        400: hsl(18, 53%, 45%),
-        500: hsl(18, 53%, 30%),
-        600: hsl(18, 53%, 20%),
-        800: hsl(18, 53%, 10%),
-        900: hsl(18, 53%, 5%),
+        100: scale-color($base-primary-color, $lightness: 90%),
+                // 100: hsl(18, 53%, 95%),
+        200: scale-color($base-primary-color, $lightness: 60%),
+        400: scale-color($base-primary-color, $lightness: 30%),
+        500: $base-primary-color,
+        600: scale-color($base-primary-color, $lightness: -30%),
+        800: scale-color($base-primary-color, $lightness: -60%),
+        900: scale-color($base-primary-color, $lightness: -90%),
     ),
     neutral: (
         100: hsl(0, 0%, 100%), 
@@ -17,3 +20,23 @@ $colors: (
         900: hsl(0, 0%, 15%), 
     )
 );
+
+// $colors: (
+//     primary: (
+//         100: hsl(18, 53%, 95%),
+//         200: hsl(18, 53%, 60%),
+//         400: hsl(18, 53%, 45%),
+//         500: hsl(18, 53%, 30%),
+//         600: hsl(18, 53%, 20%),
+//         800: hsl(18, 53%, 10%),
+//         900: hsl(18, 53%, 5%),
+//     ),
+//     neutral: (
+//         100: hsl(0, 0%, 100%), 
+//         200: hsl(0, 0%, 87%), 
+//         300: hsl(0, 0%, 80%), 
+//         700: hsl(0, 0%, 40%), 
+//         800: hsl(0, 0%, 30%), 
+//         900: hsl(0, 0%, 15%), 
+//     )
+// );

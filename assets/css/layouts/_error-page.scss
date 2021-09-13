@@ -1,4 +1,7 @@
-.error-page {
-    place-items: center;
+/* Error Page */
+.error-page {    
+    display: grid;
     grid-template: none;
+    gap: 0;
+    place-items: center;
 }

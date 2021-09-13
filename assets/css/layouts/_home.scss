@@ -1,25 +1,14 @@
-@use '../abstracts' as *;
 @use '../utilities' as *;
 
 /* -------------------------------------------------------------------------- */
-/* Global */
-body {
-    background-color: var(--clr-primary-100);
-    color: var(--clr-primary-900);
-    font-family: var(--ff-primary);
-    font-weight: 400;
-    font-size: clamp(1rem, 0.55rem + 2vw, 1.15rem);//1.3125rem;
-    line-height: 1.6;
-    
+/* Home Page */
+.home {    
     display: grid;
     grid-template: 
         ". header main ." 1fr
         ". footer main ." min-content
         / 1fr minmax(18rem, 30rem) minmax(42rem, 70rem) 1fr;
     gap: 0;
-
-    min-height: 100vh;
-    position: relative;
 
     @include mq(small) {
         grid-template: 
@@ -28,56 +17,6 @@ body {
             "footer" min-content
             / 1fr;
     }
-}
-
-h1,
-h2 {
-    line-height: 1;
-    font-family: var(--ff-accent);
-    font-weight: 900;
-}
-
-a:focus {
-    outline: 0.1em solid currentColor;
-    outline-offset: 0.2em;
-}
-
-/* -------------------------------------------------------------------------- */
-/* Header */
-header {
-    grid-area: header;
-    padding-inline: 1em;
-    
-    text-align: center;
-    background-image: var(--bg-gradient);
-    background-size: 300%;
-    background-position: right;
-
-    .header-container {
-        position: sticky;
-        align-self: start;
-        top: 0;
-    
-        padding-block-start: 1em;
-        padding-block: clamp(1em, 5vw, 4em);
-        padding-inline: 1em;
-
-        .name {
-            margin: 0.5em;
-        }
-        
-        .avatar {
-            border-radius: 100%;
-            width: 65%;
-            max-width: 24ch;
-        }
-
-        .tagline {
-            padding-top: 1em;
-            font-size: 1.2em;
-        }
-    }
-
 }
 
 /* -------------------------------------------------------------------------- */
@@ -92,20 +31,6 @@ header {
 
     ul {
         margin: 0;
-        margin-bottom: 1em;
-        // list-style: "";
-
-        // li::before {
-        //     font-family: "Font Awesome 5 Free";
-        //     font-weight: 900;
-        //     content: "\25cf";
-        //     display: inline-block;
-        //     font-style: normal;
-        //     font-variant: normal;
-        //     text-rendering: auto;
-        //     -webkit-font-smoothing: antialiased;
-        //     margin-right: 0.5em;
-        // }
     }
 
     section {
@@ -114,7 +39,7 @@ header {
 
         .card {
             padding-inline: 0.5rem;
-            margin-block: 0.5rem;
+            margin-block: 1rem;
             box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem var(--clr-box-shadow);
             animation: box-shadow 400ms ease;
     
@@ -173,48 +98,3 @@ header {
 
 }
 
-/* -------------------------------------------------------------------------- */
-/* Footer */
-footer {
-    grid-area: footer;
-
-    text-align: center;
-    background-color: var(--clr-primary-900);
-    color: var(--clr-primary-100);
-    padding-block-start: 0.5em;
-
-    position: sticky;
-    bottom: 0;
-}
-
-.icon {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-size: 1.5rem;
-
-    @each $iconname, $icondata in $icons {
-        &.#{$iconname}::before {
-            @each $prop, $value in $icondata {
-                #{$prop}: $value;
-            }
-        }        
-    }
-}
-
-.icons {
-    * {
-        margin-inline: 0.25em;
-    }
-    a {
-        text-decoration: none;
-        color: inherit;
-    }
-    
-    a:hover,
-    a:focus {
-        color: var(--clr-primary-200);
-    }
-}

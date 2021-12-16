@@ -3,11 +3,12 @@ $base-primary-color: hsl(18, 53%, 30%);
 $colors: (
     primary: (
         100: scale-color($base-primary-color, $lightness: 90%),
-                // 100: hsl(18, 53%, 95%),
         200: scale-color($base-primary-color, $lightness: 60%),
+        300: scale-color($base-primary-color, $lightness: 45%),
         400: scale-color($base-primary-color, $lightness: 30%),
         500: $base-primary-color,
         600: scale-color($base-primary-color, $lightness: -30%),
+        700: scale-color($base-primary-color, $lightness: -45%),
         800: scale-color($base-primary-color, $lightness: -60%),
         900: scale-color($base-primary-color, $lightness: -90%),
     ),

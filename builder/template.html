@@ -34,8 +34,8 @@
 	<div class="main">
 
 		<!-- Education -->
-		<section>
-			<h2>Education</h2>
+		<section id="education">
+			<h2 class="heading">Education</h2>
 			{{#education}}
 			<div class="card">
 				<h3>{{title}} ({{major}})</h3>
@@ -64,8 +64,8 @@
 		</section>
 
 		<!-- Experience -->
-		<section>
-			<h2>Experience</h2>
+		<section id="experience">
+			<h2 class="heading">Experience</h2>
 			{{#experience}}
 			<div class="card">
 				<h3>{{post}}</h3>
@@ -85,10 +85,15 @@
 		</section>
 
 		<!-- Publications -->
-		<section>
-			<h2>Publications</h2>
+		<section id="publications">
+			<h2 class="heading">Publications</h2>
 
-			{{#publications_conf}}
+			{{#publications}}
+
+			<!-- Conferences -->
+			<h2 class="subheading">Conferences</h2>
+
+			{{#conferences}}
 			<a href="{{& url}}">
 				<div class="card">
 					<h3>{{title}}</h3>
@@ -99,12 +104,10 @@
 					</p>
 				</div>
 			</a>
-			{{/publications_conf}}
-		</section>
+			{{/conferences}}
 
-		<!-- Patents -->
-		<section>
-			<h2>Patents</h2>
+			<!-- Patents -->
+			<h2 class="subheading">Patents</h2>
 
 			{{#patents}}
 			<a href="{{& url}}">
@@ -123,11 +126,13 @@
 				</div>
 			</a>
 			{{/patents}}
+
+			{{/publications}}
 		</section>
 
 		<!-- Other Academic Experience -->
-		<section>
-			<h2>Other Academic Experience</h2>
+		<section id="other_academic_experience">
+			<h2 class="heading">Other Academic Experience</h2>
 
 			{{#other_academic_experience}}
 			<div class="card">
@@ -138,8 +143,8 @@
 		</section>
 
 		<!-- Achievements -->
-		<section>
-			<h2>Achievements</h2>
+		<section id="achievements">
+			<h2 class="heading">Achievements</h2>
 
 			{{#achievements}}
 			<div class="card">
@@ -150,8 +155,8 @@
 		</section>
 
 		<!-- Languages -->
-		<section>
-			<h2>Languages</h2>
+		<section id="languages">
+			<h2 class="heading">Languages</h2>
 
 			{{#languages}}
 			<div class="language card">

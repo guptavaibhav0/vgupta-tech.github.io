@@ -7,7 +7,7 @@ from loader import Loader
 
 dirpath = os.path.dirname(os.path.abspath(__file__))
 
-with open(os.path.join(dirpath, "yaml_files", "main.yaml"), "r") as f:
+with open(os.path.join(dirpath, "database", "main.yaml"), "r") as f:
     data = yaml.load(f, Loader)
 
 with open(os.path.join(dirpath, "template.html"), "r") as f:

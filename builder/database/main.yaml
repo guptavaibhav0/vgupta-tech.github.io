@@ -1,0 +1,14 @@
+name: Vaibhav Gupta
+tagline: >
+  Interested in development and application of optimal control theory and learning
+  systems with guarantees on safety and performance.
+education: !include education.yaml
+experience: !include experience.yaml
+
+publications:
+  patents: !include publications/patents.yaml
+  conferences: !include publications/conferences.yaml
+
+other_academic_experience: !include other_academic_experience.yaml
+achievements: !include achievements.yaml
+languages: !include languages.yaml

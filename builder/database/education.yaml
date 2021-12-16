@@ -1,0 +1,33 @@
+- title: Master of Science
+  major: Robotics
+  minor:
+  institute: École polytechnique fédérale de Lausanne
+  city: Lausanne
+  country: Switzerland
+  start_date: Sept 2019
+  end_date: Sept 2021
+  GPA: 5.512/6
+  area_of_interest: Application of optimal control theory and learning systems
+  thesis:
+    title: Vibration Control in an Adaptive Optic System
+    details: >
+      Proposed a new loosely coupled robust vibration controller schema and 
+      provided a MATLAB toolbox for the controller design.
+    link: 
+
+- title: Bachelor of Technology
+  major: Mechanical Engineering
+  minor: Interdisciplinary Specialization in Robotics
+  institute: Indian Institute of Technology Delhi
+  city: New Delhi
+  country: India
+  start_date: July 2013
+  end_date: May 2017
+  GPA: 9.231/10
+  area_of_interest: Mechanical Design and Control Theory for mechatronic applications
+  thesis:
+    title: Force Feedback in Laparoscopy
+    details: >
+      Analysed, simulated, and fabricated a compliant mechanism using flexure components 
+      to sense and map the contact forces on laparoscopic instrument for haptic control
+    link: 

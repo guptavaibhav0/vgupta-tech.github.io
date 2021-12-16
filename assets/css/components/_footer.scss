@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+@use '../utilities' as *;
+
+footer {
+    grid-area: footer;
+
+    text-align: center;
+    background-color: var(--clr-primary-900);
+
+    color: var(--clr-primary-100);
+    padding-block-start: 0.5em;
+
+    position: sticky;
+    bottom: 0;
+
+    .icon {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-size: 1.5rem;
+    
+        @each $iconname, $icondata in $icons {
+            &.#{$iconname}::before {
+                @each $prop, $value in $icondata {
+                    #{$prop}: $value;
+                }
+            }        
+        }
+    }
+    
+    .icons {
+        * {
+            margin-inline: 0.25em;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        a:hover,
+        a:focus {
+            color: var(--clr-primary-200);
+        }
+    }    
+}

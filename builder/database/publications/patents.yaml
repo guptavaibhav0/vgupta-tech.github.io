@@ -1,32 +1,35 @@
-- url: https://www.j-platpat.inpit.go.jp/c1800/PU/JP-6810779/AC6F8A600E799F1FA3192E68595E52C9584FE376245A5EF89A538DE3F24813A0/15/ja
+- url_jp: https://www.j-platpat.inpit.go.jp/c1800/PU/JP-6810779/AC6F8A600E799F1FA3192E68595E52C9584FE376245A5EF89A538DE3F24813A0/15/ja
+  url: https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2021059544
   title: 状態量算出装置、制御装置および車両 (The state quantity calculating device, control device, and vehicle)
   country: Japan
   filed_date: 26 Sept 2019
   issued_date: 6 Jan 2021
   company: 株式会社ショーワ (Showa Corporation)
-  number: 特許第6810779号(P6810779)
+  number: 特許第6810779号(JP6810779), WO/2021/059544
   inventors: 
     - name: グプタ ワイバワ (Gupta Vaibhav)
     - name: 水口 祐一郎 (Minakuchi Yuichiro)
     
-- url: https://www.j-platpat.inpit.go.jp/c1800/PU/JP-6695481/42C0FCBC18E9607E6FAB8FD4870D13F00BD90D1B7DB8FAA47BD376AF472E6CD0/15/ja
+- url_jp: https://www.j-platpat.inpit.go.jp/c1800/PU/JP-6695481/42C0FCBC18E9607E6FAB8FD4870D13F00BD90D1B7DB8FAA47BD376AF472E6CD0/15/ja
+  url: https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2020261583
   title: 接地荷重推定装置、制御装置および接地荷重推定方法 (To provide a ground load estimation device, a control device and a load estimation method)
   country: Japan
   filed_date: 25 June 2019
   issued_date: 2 Sept 2020
   company: 株式会社ショーワ (Showa Corporation)
-  number: 特許第6695481号(P6695481)
+  number: 特許第6695481号(JP6695481), WO/2020/261583
   inventors: 
     - name: 水口 祐一郎 (Minakuchi Yuichiro)
     - name: グプタ ワイバワ (Gupta Vaibhav)
 
-- url: https://www.j-platpat.inpit.go.jp/c1800/PU/JP-6748765/B33F697FE4956C12B623F6C8DCA281652AA65C25106A9DB39A4F10C33507BD2D/15/ja
+- url_jp: https://www.j-platpat.inpit.go.jp/c1800/PU/JP-6748765/B33F697FE4956C12B623F6C8DCA281652AA65C25106A9DB39A4F10C33507BD2D/15/ja
+  url: https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2020261584
   title: 接地荷重推定装置、制御装置および接地荷重推定方法 (To provide a ground load estimation device, a control device and a load estimation method)
   country: Japan
   filed_date: 25 June 2019
   issued_date: 20 May 2020
   company: 株式会社ショーワ (Showa Corporation)
-  number: 特許第6748765号(P6748765)
+  number: 特許第6748765号(JP6748765), WO/2020/261584
   inventors: 
     - name: 水口 祐一郎 (Minakuchi Yuichiro)
     - name: グプタ ワイバワ (Gupta Vaibhav)

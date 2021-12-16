@@ -2,25 +2,20 @@
 @use './utilities' as *;
 
 @use './base';
-
 @use './components';
-
 @use './layouts';
 
 
 :root{
     @each $color, $shades in $colors {
         @each $shade, $val in $shades {
-            --clr-#{$color}-#{$shade}: #{$val};            
+            --clr-#{$color}-#{$shade}: #{$val};
         }
     }
     --clr-box-shadow: #{rgba(map-get($colors, primary, 500), 0.4)};
 
     --ff-primary: 'Atkinson Hyperlegible', Arial, Helvetica, sans-serif;
-    --ff-accent: 'Lobster', cursive; //'Times New Roman', Times, serif;   
-    
-    --gradient-top-direction: 90deg;
-    --gradient-bottom-direction: 90deg;
+    --ff-accent: 'Lobster', cursive;
 
     --bg-primary-gradient: linear-gradient(
         45deg,
@@ -38,3 +33,4 @@
 //         --clr-box-shadow: #{rgba(map-get($colors, primary, 200), 0.75)};
 //     }
 // }
+
